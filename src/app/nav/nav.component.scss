@@ -1,0 +1,96 @@
+@import 'variables';
+@import 'mixins';
+
+.nav{
+  position: fixed;
+  z-index:$z-nav;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+.nav-wrap{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.nav-social{
+position: absolute;
+bottom: $margin-sides;
+    ul{
+      li{
+        display: inline-block;
+        width: 20px;
+        margin-left: 10px;
+        text-align: center;
+        a{
+          height:auto;
+          line-height: auto;
+          vertical-align: middle;
+          svg{
+            width:100%;
+            height: 100%;
+            display: block;
+          }
+        }
+        &:nth-child(1){
+          margin-left: 0;
+        }
+    }
+  }
+}
+
+.nav-ul{
+  width:100%;
+  display: block;
+  height: auto;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  @include respond-to(phone){
+    width: 80vw;
+    display: block;
+    margin: auto;
+  }
+  .nav-li{
+    // width: 100px;
+    position: relative;
+    display: block;
+    @include respond-to(phone){
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+    a{
+      width: 100%;
+      display: block;
+      height:auto;
+      line-height: auto;
+      vertical-align: middle;
+      @include h2()
+      @include hover-shifright();
+      &.nav_active{
+        margin-left: 10px!important;
+      }
+    }
+  }
+}
+
+
+
+.nav-ul.open{
+  display: block;
+  // height: auto;
+  .nav-li{
+    position: relative;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="home-projects" *ngIf="feed">
+  <a class="home-projects-a" [routerLink]="['/', 'projects']">
+  <!-- <div class="projects-wrap"
+   [ngStyle]="{'background':'url('+ feed.results['0'].data.projects_landing.img.value.main.url + ')'}">
+    <h1>projects</h1>
+  </div> -->
+  <table>
+    <tr>
+      <td>
+  <div class="home-projects-wrap">
+
+          <a class=""[routerLink]="['/', 'projects']"><h3> Projects</h3></a>
+          <div class="home-projects-illus"  (mouseenter) ="swap()" >
+            <!-- (click)="swap()" -->
+            <img class="item" [ngStyle]="getAbsPos(s.xpos)" [src]="s.id" alt="projects jessica schuster Interior design" *ngFor="let s of svgs; let i=index">
+          </div>
+
+
+
+  </div>
+</td>
+</tr>
+</table>
+  </a>
+</div>

@@ -1,0 +1,112 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+
+
+
+.press-a{
+
+}
+
+.press-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+
+.press-content{
+  width: 100vw;
+  .press-header{
+    height:$line-height-h1;
+    line-height:$line-height-h1;
+    text-align: center;
+  }
+  .press-content-ul{
+    width: 100vw;
+    .press-content-li{
+      display: inline-block;
+      position: relative;
+      width: 50vw;
+      @include hover-shifttext();
+
+      .press-content-li-img{
+        width: 50vw;
+        height: 50vh;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .press-content-li-name{
+
+        width: 50vw;
+        display: block;
+      }
+    }
+
+  }
+
+}
+  .press-content{
+    width: 60vw;
+    position: relative;
+    margin: auto;
+
+    .press-camera{
+      position: relative;
+      width: 30vw;
+      z-index: $z-press-camera;
+    }
+    .press-h3{
+      width: 100%;
+      z-index: $z-press-h;
+      position: absolute;
+      bottom:-50px;
+      text-align:right;
+      width: 100%;
+    }
+  }
+}
+
+.press-background{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  z-index:$z-press-background;
+  top:0;
+  left:0;
+  opacity:0.3;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+
+img:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+    -webkit-animation: shake 0.5s;
+    -moz-animation: shake 0.5s;
+    -ms-animation: shake 0.5s;
+    -o-animation: shake 0.5s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

@@ -1,0 +1,28 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+
+.quote{
+  display: inline-block;
+}
+
+.press-feed-h2{
+  display: inline-block;
+  @include hover-shifright();
+  width: 100%;
+  text-align: center;
+}
+.press-wrap{
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .press-feed-a{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,37 @@
+@font-face {
+    font-family: didot;
+    src: url('/assets/fonts/didot/Didot.woff2') format('woff2'), url('/assets/fonts/didot/Didot.woff') format('woff');
+    // , url('/assets/fonts/didot/Didot.otf') format('otf')
+}
+
+@font-face {
+    font-family: centurygothic_bold;
+    src: url('/assets/fonts/century/centurygothic_bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: centurygothic_light;
+    src: url('/assets/fonts/century/centurygothic_light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: folio;
+    font-weight: bold;
+    src: url('/assets/fonts/folio/FolioStd-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: folio-medium;
+  src: url('/assets/fonts/folio/Folio-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: folio;
+  font-weight: light;
+  src: url('/assets/fonts/folio/Folio-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: catalyst;
+    src: url('/assets/fonts/catalyst/CatalystQT-Light.woff2') format('woff2');
+}

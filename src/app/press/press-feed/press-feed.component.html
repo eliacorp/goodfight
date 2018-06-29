@@ -1,0 +1,9 @@
+<div *ngIf="press" class="press-wrap" [@fadeAnimation]>
+  <ul class="press-feed-ul">
+    <li class="press-feed-li" *ngFor="let item of press.results">
+      <a class="press-feed-a" [href]="item.data.press.url.value.url" target="_blank">
+        <h2 class="press-feed-h2">{{item.data.press.title.value["0"].text}}</h2>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,27 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+
+.logo{
+  position: relative;
+  width: 100vw;
+  height: auto;
+  display: block;
+  z-index:$z-logo;
+
+  .logo-wrap{
+    width:80vh;
+    margin: auto;
+    position: relative;
+    @include respond-to(phone){
+      width:58vh;
+    }
+    svg{
+      display: block;
+      width:100%;
+      height: auto;
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<nav class="nav"  [@navState]="_globalService.navState">
+<!-- [@navState]="_globalService.isNav" -->
+  <div class="nav-wrap" >
+    <!-- (mouseenter)='openNav()' (mouseout)='closeNav()' -->
+
+  <div class="nav-open-logo">
+
+  </div>
+   <ul class="nav-ul">
+
+     <li class="nav-li">
+       <a [routerLink]="['/']" class="nav-a" [class.nav_active]="route === '/'" [class.blacked_text]="_globalService.isStyling  && !_matchMediaService.IsPhone()">
+         <h2>home</h2>
+       </a>
+     </li>
+     <li class="nav-li">
+       <a [routerLink]="['/press']" class="nav-a" [class.nav_active]="route === '/press'" [class.blacked_text]="_globalService.isStyling  && !_matchMediaService.IsPhone()">
+         <h2>Press</h2>
+       </a>
+     </li>
+     <li class="nav-li">
+       <a
+          [routerLink]="['/']"
+          fragment="about"
+          class="nav-a">
+          <h2>About</h2>
+       </a>
+     </li>
+     <li class="nav-li">
+       <a
+         [routerLink]="['/']"
+         fragment="contact"
+         class="nav-a"
+         (click)="_globalService.toggleNav()">
+         <h2>Contact</h2>
+       </a>
+     </li>
+   </ul>
+   <div class="nav-social">
+     <ul>
+       <li>
+         <a href="https://www.instagram.com/gdfht" target="_blank">ig</a>
+       </li>
+
+     </ul>
+   </div>
+
+  </div>
+
+</nav>

@@ -1,0 +1,23 @@
+<a [routerLink]="['/', 'press']" class="press-a" *ngIf="press">
+  <div class="press-wrap">
+    <!-- <div class="press-background" [ngStyle]="{'background':'url('+ feed.results['0'].data.press_landing.img.value.main.url + ')'}">
+    </div> -->
+
+    <div class="press-content">
+
+      <img class="press-camera" src="/assets/images/camera.svg" alt="camera">
+      <h3 class="press-header">Press</h3>
+      <!-- <ul class="press-content-ul">
+        <li class="press-content-li" *ngFor="let p of press.results | slice:0:2; let i=index">
+          <div class="press-content-li-img"
+          [ngStyle]="{'background':'url('+ p?.data.press.image.value.main.url + ')'}">
+          </div>
+           <h3 class="press-content-li-name"><span>{{p.data.press.title.value["0"].text}}</span></h3>
+        </li>
+      </ul> -->
+
+    </div>
+
+
+  </div>
+</a>

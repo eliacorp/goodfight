@@ -1,0 +1,35 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+.contact{
+  @include fullpageflex(white);
+  color: black;
+  h2, h3, p{
+    color: black;
+  }
+}
+
+.contact-content{
+  position: relative;
+  margin:auto;
+  width: 40vw;
+  text-align: center;
+  a{
+    @include p();
+    width: 100%;
+    display: block;
+    text-align: center;
+    clear: both;
+  }
+}
+
+.contact-item{
+  text-align: center;
+  margin: 3rem 0;
+
+  p{
+    margin-top: 30px;
+  }
+
+}

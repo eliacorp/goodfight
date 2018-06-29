@@ -1,0 +1,10 @@
+<div class="homeWrap" id="container" [@fadeAnimation] (scroll)="onScroll($event)">
+
+    <app-about (dataLoaded)="onNotify($event)" id="about" name="about"></app-about>
+    <app-projects (dataLoaded)="onNotify($event)"></app-projects>
+    <app-press (dataLoaded)="onNotify($event)"></app-press>
+    <div id="contact" name="contact">
+      <app-contact (dataLoaded)="onNotify($event)"></app-contact>
+    </div>
+
+</div>

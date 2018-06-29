@@ -1,0 +1,45 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0;
+
+  .project-info{
+    position: fixed;
+    left: $margin-sides;
+    top: $margin-sides;
+    z-index:$z-info;
+    h2{
+      font-size: 18px;
+    }
+    h3{
+      font-size: 13px;
+      line-height: 23px;
+    }
+  }
+
+  .project-detail-wrap{
+    width: 100vw;
+    position: relative;
+    display:block;
+    // max-width: 600px;
+
+    li{
+      margin: 5rem 0;
+      width: 90vw;
+      margin-left:$margin-sides;
+      display: block;
+
+      img{
+        max-width: 100%;
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,14 @@
+<div class="wrapper" *ngIf="detail">
+
+  <div class="project-info">
+    <h2>{{detail.data.projects.title.value["0"].text}}</h2>
+    <h3>{{detail.data.projects.location.value["0"].text}}</h3>
+  </div>
+
+
+  <ul class="project-detail-wrap">
+    <li *ngFor="let item of detail.data.projects?.body1.value['0'].repeat">
+      <img [src]="item?.image.value.main.url" alt="">
+    </li>
+  </ul>
+</div>
