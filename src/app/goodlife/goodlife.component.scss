@@ -1,0 +1,67 @@
+@import 'variables';
+@import 'mixins';
+
+.goodlife{
+  // width:calc(100vw - 250px);
+  height: auto;
+  // margin-left: 250px;
+
+
+}
+
+.goodlife-ul{
+  width:100%;
+  padding-bottom: $margin-top-li;
+  .goodlife-li{
+    padding-top: $margin-top-li;
+    .goodlife-question{
+      margin-top: $margin-top-p;
+    }
+  }
+}
+
+.nodes{
+  width:50vw;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  left:10vw;
+  background-image: url("https://s3-us-west-2.amazonaws.com/asset.goodfight/images/7369931_orig.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 40px 40px #f8f7ec;
+
+}
+
+
+// .active {
+//   stroke: #000;
+//   stroke-width: 2px;
+// }
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+  width: 100px;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.goodlife-interview{
+  position: relative;
+  margin-left: 60vw;
+  width:40vw;
+  h2{
+    color:$blue;
+  }
+  .goodlife-li{
+    // padding-top: $margin-top-li;
+    .goodlife-question{
+      margin-top: $margin-top-p;
+    }
+  }
+}

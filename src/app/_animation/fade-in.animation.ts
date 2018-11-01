@@ -1,5 +1,4 @@
 import { trigger, state, animate, transition, style } from '@angular/animations';
-import { AnimationEntryMetadata } from "@angular/core";
 
 export const fadeAnimation =
     trigger('fadeAnimation', [

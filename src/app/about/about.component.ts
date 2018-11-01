@@ -40,7 +40,7 @@ export class AboutComponent implements OnInit {
        }
 
        getPage(page): void{
-         this._feedService.getFeed('about', page)
+         this._feedService.getList('about', page)
          .subscribe(
            feed=>{
              if(page==1){

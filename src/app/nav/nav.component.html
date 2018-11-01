@@ -1,50 +1,88 @@
-<nav class="nav"  [@navState]="_globalService.navState">
-<!-- [@navState]="_globalService.isNav" -->
-  <div class="nav-wrap" >
-    <!-- (mouseenter)='openNav()' (mouseout)='closeNav()' -->
+<nav class="nav"  >
+<!-- [@navState]="_globalService.navState" -->
 
-  <div class="nav-open-logo">
 
-  </div>
-   <ul class="nav-ul">
+<ul class="nav-top">
+  <li class="nav-li">
+    <a href="https://gdfht.com/cart" class="nav-a" routerLinkActive="active-link">
+      <h2>Cart</h2>
+    </a>
+  </li>
+  <li class="nav-li">
+    <a href="https://gdfht.com/account/login" class="nav-a" routerLinkActive="active-link">
+      <h2>Login</h2>
+    </a>
+  </li>
+  <li class="nav-li">
+    <a href="https://gdfht.com/account/register" class="nav-a" routerLinkActive="active-link">
+      <h2>Create Account</h2>
+    </a>
+  </li>
+</ul>
+
+<ul class="nav-main">
+  <li class="nav-li">
+    <a href="https://gdfht.com/" class="nav-a" [class.nav_active]="route === '/goodlife'" [class.blacked_text]="_globalService.isStyling  && !_matchMediaService.IsPhone()">
+      <h2>Shop</h2>
+    </a>
+  </li>
+  <li class="nav-li">
+    <a [routerLink]="['/goodlife']" class="nav-a" [class.nav_active]="route === '/goodlife'" routerLinkActive="active-link">
+      <h2>Goodlife</h2>
+    </a>
+  </li>
+  <li class="nav-li">
+    <a [routerLink]="['/editorial']" class="nav-a" [class.nav_active]="route === '/editorial'" routerLinkActive="active-link">
+      <h2>Editorial</h2>
+    </a>
+  </li>
+  <li class="nav-li">
+    <a [routerLink]="['/press']" class="nav-a" [class.nav_active]="route === '/press'" [class.blacked_text]="_globalService.isStyling  && !_matchMediaService.IsPhone()">
+      <h2>Press</h2>
+    </a>
+  </li>
+</ul>
+
+<div class="nav-logo">
+  <a [routerLink]="['/']" class="nav-a" [class.nav_active]="route === '/'" [class.blacked_text]="_globalService.isStyling  && !_matchMediaService.IsPhone()">
+    <app-logo></app-logo>
+  </a>
+</div>
+
+   <ul class="nav-sub">
 
      <li class="nav-li">
-       <a [routerLink]="['/']" class="nav-a" [class.nav_active]="route === '/'" [class.blacked_text]="_globalService.isStyling  && !_matchMediaService.IsPhone()">
-         <h2>home</h2>
+       <a href="https://gdfht.com/pages/subscribe" class="nav-a">
+          <h2>Subscribe</h2>
        </a>
      </li>
      <li class="nav-li">
-       <a [routerLink]="['/press']" class="nav-a" [class.nav_active]="route === '/press'" [class.blacked_text]="_globalService.isStyling  && !_matchMediaService.IsPhone()">
-         <h2>Press</h2>
+       <a href="https://gdfht.com/pages/customer-service" class="nav-a">
+          <h2>Customer Service</h2>
        </a>
      </li>
      <li class="nav-li">
        <a
-          [routerLink]="['/']"
-          fragment="about"
-          class="nav-a">
-          <h2>About</h2>
-       </a>
-     </li>
-     <li class="nav-li">
-       <a
-         [routerLink]="['/']"
+         [routerLink]="['/contact']"
          fragment="contact"
          class="nav-a"
          (click)="_globalService.toggleNav()">
          <h2>Contact</h2>
        </a>
      </li>
+     <li class="nav-li">
+       <a href="https://www.instagram.com/gdfht" target="_blank">ig</a>
+     </li>
    </ul>
-   <div class="nav-social">
-     <ul>
-       <li>
-         <a href="https://www.instagram.com/gdfht" target="_blank">ig</a>
-       </li>
 
-     </ul>
-   </div>
+   <ul class="nav-legal">
 
-  </div>
+     <li class="nav-li">
+       <a href="https://gdfht.com/pages/terms-conditions" class="nav-a"><h2>Terms</h2></a>
+       -
+       <a href="https://gdfht.com/pages/privacy-policy" class="nav-a"><h2>Privacy Policy</h2></a>
+     </li>
+   </ul>
+
 
 </nav>

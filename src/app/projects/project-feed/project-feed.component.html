@@ -1,32 +1,3 @@
 <div *ngIf="feed" class="wrapper" [@fadeAnimation]>
-  <ul class="project-feed-wrap">
-    <li *ngFor="let f of feed.results; let i = index">
-      <!-- <a [routerLink]="['/',f.type, f.uid]"> -->
-        <div class="project-feed-container" id="container-{{i}}" #container>
-          <div class="container-left" (click)="scrollHorizontal(0, i, $event)">
-            <arrow class="arrow-left arrow"></arrow>
-          </div>
-          <div class="container-right" (click)="scrollHorizontal(1, i, $event)">
-            <arrow class="arrow-right arrow "></arrow>
-          </div>
-          <!-- *ngIf="loading" -->
 
-          <!-- <img [hidden]="loading" (load)="onLoad()" src="{{ source }}" /> -->
-          <div class="project-feed-img" *ngFor="let i of f.data.projects?.body1?.value">
-
-            <img class="imgloading" src="assets/images/chair_loading.gif" alt="loading" *ngIf="loading"/>
-            <div class="project-feed-img-background" [ngStyle]="{'background-image': 'url(' + i['non-repeat'].image?.value.main.url + ')'}"
-            [hidden]="loading" (load)="onLoad()">
-            </div>
-          </div>
-
-        </div>
-        <!-- <img [src]="f.data.projects.cover.value.main.url" alt=""> -->
-        <div class="project-feed-info">
-          <h3>{{f.data.projects?.title.value["0"].text}}</h3>
-          <p>{{f.data.projects?.location.value["0"].text}}</p>
-
-        </div>
-    </li>
-  </ul>
 </div>

@@ -5,9 +5,8 @@ let fs = require('fs');
 // let Prismic = require('prismic-nodejs');
 var Prismic = require('prismic-javascript');
 
-const ENDPOINT = "https://jessicaschuster.cdn.prismic.io/api";
-const ACCESSTOKEN = 'MC5XaTdtX0NZQUFOWWRxNklP.77-977-977-9Ru-_vR_vv71B77-9ZE7vv70j77-977-9aUJMWCnvv73vv71z77-977-977-977-9Xe-_ve-_vXJo'; // Only if your API is private
-
+const ENDPOINT = "https://goodfight.cdn.prismic.io/api/v2";
+const ACCESSTOKEN = 'MC5XMUtJQXg4QUFLWWlFcFl5.77-9cVV877-977-9M--_vTNq77-977-9dy5Y77-977-977-977-9LFvvv70rbS_vv73vv73vv73vv73vv73vv71R'
 
 
 
@@ -28,8 +27,9 @@ exports.getAll = function (req, res) {
   initApi(req).then(function(api){
     api.query(
         Prismic.Predicates.at('document.type', type),
-        { orderings : '[my.'+type+'.date desc]', pageSize : 3, page : page }
+        { orderings : '[my.'+type+'.date desc]', pageSize : 10, page : page }
       ).then(function(response) {
+        console.log(response);
         res.status(200).json(response);
           // response is the response object, response.results holds the documents
       },function(err) {

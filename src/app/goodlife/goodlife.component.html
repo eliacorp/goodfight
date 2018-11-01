@@ -1,0 +1,37 @@
+<div class="goodlife">
+ <!-- *ngIf="goodlife" -->
+<svg #svgg class="goodlife-svg" width="60vw" height="100vh"></svg>
+
+
+<ul class="goodlife-interview" *ngIf="goodlife">
+  <div class="goodlife-intro">
+    <h1>{{goodlife.results[selected].data.interviewee[0].text}}</h1>
+    <!-- <img src="{{goodlife.results[selected].data.cover[0].image.url}}" alt=""> -->
+  </div>
+  <li class="goodlife-li" *ngFor="let e of goodlife.results[selected].data.body">
+    <div class="goodlife-question" *ngFor="let q of e.items">
+      <h3>{{q.question[0].text}}</h3>
+      <p>{{q.answer[0].text}}</p>
+    </div>
+
+  </li>
+</ul>
+
+  <!-- <ul class="goodlife-ul" *ngFor="let l of goodlife.results">
+    <div class="goodlife-intro">
+      <img src="{{l.data.cover[0].image.url}}" alt="">
+    </div>
+    <li class="goodlife-li" *ngFor="let e of l.data.body">
+      <div class="goodlife-question" *ngFor="let q of e.items">
+        <h3>{{q.question[0].text}}</h3>
+        <p>{{q.answer[0].text}}</p>
+      </div>
+
+    </li>
+  </ul> -->
+
+
+
+
+
+</div>

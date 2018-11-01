@@ -43,7 +43,7 @@ export class PressFeedComponent implements OnInit {
      }
 
      getPage(page): void{
-       this._feedService.getFeed('press', page)
+       this._feedService.getList('press', page)
        .subscribe(
          press=>{
            if(page==1){

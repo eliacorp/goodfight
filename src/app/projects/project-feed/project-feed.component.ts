@@ -61,11 +61,13 @@ export class ProjectFeedComponent implements OnInit {
        this._globalService.isHome=false;
      }
 
+
+
      getPage(page): void{
        this.paginationInProcess=true;
-       this._feedService.getFeed('projects', page)
+       this._feedService.getList('projects', page)
        .subscribe(
-         feed=>{
+         (feed:any)=>{
            if(page==1){
              this.feed=feed;
              this._globalService.setLoading(false);
@@ -95,29 +97,6 @@ export class ProjectFeedComponent implements OnInit {
       this.imgloading = false;
      }
 
-  scrollHorizontal(value, id, e):void{
-    e.preventDefault();
-    console.log(id);
-    let containerWidth = window.innerWidth - 100;
-      // @ViewChild('container')  container: ElementRef;
-    // this.container.nativeElement.scrollLeft( 300 );
-    // this.container.nativeElement.animate({
-    //   scrollLeft: window.innerWidth
-    // },800);
-    this.container = document.getElementById("container-"+id);
-    console.log(this.container.scrollLeft);
-    this.scroll=this.container.scrollLeft;
-
-  if(value==0){
-    this.scroll-=containerWidth;
-    console.log(0);
-  }else if(value==1){
-    this.scroll+=containerWidth;
-    console.log(1);
-  }
-
-    this.container.scrollTo({ left: this.scroll, top: 0, behavior: 'smooth' });
-  }
 
 
 

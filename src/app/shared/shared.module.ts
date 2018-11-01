@@ -7,14 +7,12 @@ import {MatchMediaService} from './match-media.service';
 import {EncodeURIPipe} from './encodeURI.pipe';
 import {SafePipe} from './safeUrl.pipe';
 import {YoutubeEmbedPipe} from './youtubeEmbed.pipe';
-import { ArrowComponent } from './arrow/arrow.component';
 
 
 @NgModule({
   declarations: [
     SafePipe,
-    YoutubeEmbedPipe,
-    ArrowComponent
+    YoutubeEmbedPipe
   ],
   providers:[PrismicService, GlobalService, MatchMediaService],
   imports:[CommonModule],
@@ -22,8 +20,7 @@ import { ArrowComponent } from './arrow/arrow.component';
     CommonModule,
     FormsModule,
     SafePipe,
-    YoutubeEmbedPipe,
-    ArrowComponent
+    YoutubeEmbedPipe
   ]
 
 })

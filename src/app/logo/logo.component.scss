@@ -5,23 +5,15 @@
 
 .logo{
   position: relative;
-  width: 100vw;
+  width: 160px;
   height: auto;
   display: block;
   z-index:$z-logo;
-
-  .logo-wrap{
-    width:80vh;
+  margin: 0;
+  svg{
+    display: block;
+    width:100%;
+    height: auto;
     margin: auto;
-    position: relative;
-    @include respond-to(phone){
-      width:58vh;
-    }
-    svg{
-      display: block;
-      width:100%;
-      height: auto;
-      margin: auto;
-    }
   }
 }

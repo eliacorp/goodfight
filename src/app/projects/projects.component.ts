@@ -17,7 +17,6 @@ export class ProjectsComponent implements OnInit {
   listFilter: string;
   errorMessage: string;
   feed: any;
-  private svgs = [{val:0,id:'/assets/images/chair.svg',xpos:0},{val:1,id:'/assets/images/light.svg',xpos:1},{val:2,id:'/assets/images/statue.svg',xpos:2}];
   // [{img:'/assets/images/chair.svg'},{img:'/assets/images/light.svg'},{img:'/assets/images/statue.svg'}]
   @Output() dataLoaded = new EventEmitter<string>();
 
@@ -35,30 +34,11 @@ export class ProjectsComponent implements OnInit {
        }
      }
 
-     getAbsPos(index){
-        console.log(index);
-        return {left:index*20+'vw'};
-      }
 
-    swap(){
-       var a= this.svgs[0];
-       var c = this.svgs[2];
 
-       //reorder the array first, since xpos did not change, no animation will be triggered
-       this.svgs[0] = c;
-       this.svgs[2] = a;
-
-       //update the xpos value in async, which will trigger an animation
-       setTimeout(() => {
-         var tempX = a.xpos;
-         a.xpos = c.xpos;
-         c.xpos = tempX;
-       }, 10);
-
-     }
 
      getPage(page): void{
-       this._feedService.getFeed('projects_landing', page)
+       this._feedService.getList('projects_landing', page)
        .subscribe(
          feed=>{
            if(page==1){

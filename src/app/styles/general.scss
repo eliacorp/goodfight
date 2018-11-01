@@ -26,6 +26,9 @@
 .active{
   opacity:0.1;
 }
+.active-link{
+  color:$blue!important;
+}
 
 a:active{
 
@@ -135,8 +138,12 @@ body {
   position: relative;
   background: $cream;
   color: $black;
-}
 
+}
+*{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 p, a, li {
   font-size: $font-size-p;
@@ -153,6 +160,7 @@ input, textarea, select, a, li {
 a{
   cursor:pointer;
   @include p();
+  @include hover-effect-color($black, $blue);
 }
 
 .a-hover{

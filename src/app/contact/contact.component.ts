@@ -44,7 +44,7 @@ export class ContactComponent implements OnInit {
 
 
      getPage(page): void{
-       this._feedService.getFeed('contact', page)
+       this._feedService.getList('contact', page)
        .subscribe(
          feed=>{
            if(page==1){

@@ -8,10 +8,10 @@ $font-weight-heavy: 900;
 
 
 // ........................................................FONT SIZES
-$font-size-h1:18px;
-$font-size-h2:30px;
-$font-size-h3:14px;
-$font-size-p: 11px;
+$font-size-h1:25px;
+$font-size-h2:14px;
+$font-size-h3:13px;
+$font-size-p: 13px;
 $font-size-p2: 7px;
 
 $font-size-h1-mobile: 18px;
@@ -21,19 +21,19 @@ $font-size-p-mobile: 11px;
 $font-size-p2-mobile: 7px;
 
 // ........................................................FONT FAMILIES
-$font-family-h1: folio;
-$font-family-h2: folio-medium, sans-serif;
-$font-family-h3: folio-medium, sans-serif;
-$font-family-p: folio,serif;
-$font-family-p2: folio,serif;
+$font-family-h1: 'apercu_regular';
+$font-family-h2: 'apercu_regular';
+$font-family-h3: 'apercu_regular';
+$font-family-p: 'apercu_light';
+$font-family-p2: 'apercu_light', serif;
 
 
 // ........................................................FONT LINEHEIGHTS
-$line-height-h1: 20px;
-$line-height-h2: 50px;
-$line-height-h3: 30px;
-$line-height-p: 20px;
-$line-height-p2: 15px;
+$line-height-h1: 2;
+$line-height-h2: 2;
+$line-height-h3: 2;
+$line-height-p: 1.7;
+$line-height-p2:1.7;
 
 $line-height-h1-mobile: 20px;
 $line-height-h2-mobile: 45px;
@@ -42,20 +42,20 @@ $line-height-p-mobile: 20px;
 $line-height-p2-mobile: 15px;
 
 
-$letter-spacing: 1px;
-$letter-spacing-h1: 2px;
-$letter-spacing-h2: 2px;
-$letter-spacing-h3: 1px;
+$letter-spacing: 0px;
+$letter-spacing-h1: 0px;
+$letter-spacing-h2: 0px;
+$letter-spacing-h3: 0px;
 $letter-spacing-p:0px;
 $letter-spacing-p2:0px;
 
 // ........................................................COLORS
 $black: #000000;
 $white: #FFFFFF;
-$blue: rgba(0,118,92);
+$blue: #3076BA;
 $cream: #f8f7ec;
 $grey: #a8a8a8;
-$light-grey: #F5F5F5;
+$light-grey:#F5F5F5;
 
 
 // ........................................................MARGINS
@@ -92,15 +92,8 @@ $z-press-camera:8;
 $z-press-h:8;
 $z-press-background:7;
 $z-feed:7;
-
 $z-detail-li:4;
 $z-detail-cover:3;
-
-
-
-
-
-
 
 
 /*....................................................................................*/

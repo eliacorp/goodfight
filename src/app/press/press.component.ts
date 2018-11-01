@@ -46,12 +46,11 @@ export class PressComponent implements OnInit {
        }
 
        getPage(page): void{
-         this._feedService.getFeed('press', page)
+         this._feedService.getList('press', page)
          .subscribe(
            press=>{
              if(page==1){
                this.press=press;
-               this.dataLoaded.emit('data loaded in press component');
                this._globalService.setLoading(false);
              }else{
                console.log('in else block');
