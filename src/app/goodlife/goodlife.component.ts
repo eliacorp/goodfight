@@ -13,6 +13,7 @@ import * as d3 from "d3";
 })
 export class GoodlifeComponent implements OnInit {
 
+//initiating variables
   errorMessage: string;
   goodlife: IGoodlife;
   radius = 10;
@@ -21,6 +22,10 @@ export class GoodlifeComponent implements OnInit {
   selected:number
   @ViewChild('svgg') svgg:ElementRef;
   _this = this;
+  isGradientVisible = false;
+  gradientTop: number;
+  gradientLeft: number;
+  gradientRadius
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -36,8 +41,9 @@ export class GoodlifeComponent implements OnInit {
     // elementRef: ElementRef,
     private _globalService: GlobalService,
     private _prismicService: PrismicService,
+    public el: ElementRef<HTMLElement>
   ){}
-
+// first function upn start
   ngOnInit() {
     this._globalService.setLoading(true);
     if(!this.goodlife){
@@ -45,13 +51,12 @@ export class GoodlifeComponent implements OnInit {
     this.innerWidth = window.innerWidth;
     this.innerHeight = window.innerHeight;
     this.selected=0;
-
     }
 
   }
 
   ngAfterViewInit() {
-
+    this.gradientRadius = this.el.nativeElement.getBoundingClientRect().width;
   }
 
 
@@ -112,10 +117,11 @@ force(interviews){
 
   var nodes_data = interviews;
  var links_data = [
-   {"source": "lingchou", "target": "yukimatsuda", "type":"A", "distance":240},
-    {"source": "yukimatsuda", "target": "noellecornelio", "type":"A", "distance":250},
-    {"source": "noellecornelio", "target": "joshwarner", "type":"E", "distance":370}
-    // {"source": "joshwarner", "target": "lingchou", "type":"A", "distance":370}
+   {"source": "lingchou", "target": "yukimatsuda", "type":"A", "distance":40},
+    {"source": "yukimatsuda", "target": "noellecornelio", "type":"A", "distance":50},
+    {"source": "noellecornelio", "target": "joshwarner", "type":"A", "distance":70},
+    {"source": "joshwarner", "target": "aaronhutcherson", "type":"A", "distance":50}
+    // {"source": "aaronhutcherson", "target": "lingchou", "type":"E", "distance":570}
 
 ]
 
@@ -138,7 +144,7 @@ var simulation = d3.forceSimulation()
 //also going to add a centering force
 simulation
     .force("charge_force", d3.forceManyBody())
-    .force("center_force", d3.forceCenter(width / 2, height / 2));
+    .force("center_force", d3.forceCenter((width/2), (height/2)));
 
 //draw circles for the nodes
 
@@ -174,10 +180,10 @@ var node = svg
     //     };
     // };
 
-    node.append("image")
-        .attr("xlink:href",  function(d:any) { return d.data.cover[0].image.url;})
-        .attr("width", 100)
-        .attr("height", 100)
+    // node.append("image")
+    //     .attr("xlink:href",  function(d:any) { return d.data.cover[0].image.url;})
+    //     .attr("width", 100)
+    //     .attr("height", 100)
 //add interviewee
     node.append("text")
     // .attr("x", 0 )
@@ -290,6 +296,45 @@ function drag_end(d:any) {
 drag_handler(node);
 
 }//end of d3 fn
+
+
+
+
+
+
+
+// gradient
+
+
+@HostListener('mouseenter')
+onMouseEnter() {
+  this.isGradientVisible = true;
+}
+
+@HostListener('mouseleave')
+onMouseLeave() {
+  this.isGradientVisible = false;
+}
+
+@HostListener('mousemove', ['$event'])
+onMouseMove(event: MouseEvent) {
+  this.gradientLeft = event.pageX - this.el.nativeElement.offsetLeft;
+  this.gradientTop = event.pageY - this.el.nativeElement.offsetTop;
+}
+
+
+get gradientStyle() {
+  const top = this.gradientTop;
+  const left = this.gradientLeft;
+  const gradientRadius = this.isGradientVisible ? this.gradientRadius : 0;
+
+  return {
+    'height.px': gradientRadius*1.2,
+    'width.px': gradientRadius*1.2,
+    'top.px': top
+    // 'left.px': left
+  };
+}
 
 
 

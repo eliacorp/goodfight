@@ -608,7 +608,7 @@ var EditorialComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"goodlife\">\n <!-- *ngIf=\"goodlife\" -->\n<svg #svgg class=\"goodlife-svg\" width=\"60vw\" height=\"100vh\"></svg>\n\n\n<ul class=\"goodlife-interview\" *ngIf=\"goodlife\">\n  <div class=\"goodlife-intro\">\n    <h1>{{goodlife.results[selected].data.interviewee[0].text}}</h1>\n    <!-- <img src=\"{{goodlife.results[selected].data.cover[0].image.url}}\" alt=\"\"> -->\n  </div>\n  <li class=\"goodlife-li\" *ngFor=\"let e of goodlife.results[selected].data.body\">\n    <div class=\"goodlife-question\" *ngFor=\"let q of e.items\">\n      <h3>{{q.question[0].text}}</h3>\n      <p>{{q.answer[0].text}}</p>\n    </div>\n\n  </li>\n</ul>\n\n  <!-- <ul class=\"goodlife-ul\" *ngFor=\"let l of goodlife.results\">\n    <div class=\"goodlife-intro\">\n      <img src=\"{{l.data.cover[0].image.url}}\" alt=\"\">\n    </div>\n    <li class=\"goodlife-li\" *ngFor=\"let e of l.data.body\">\n      <div class=\"goodlife-question\" *ngFor=\"let q of e.items\">\n        <h3>{{q.question[0].text}}</h3>\n        <p>{{q.answer[0].text}}</p>\n      </div>\n\n    </li>\n  </ul> -->\n\n\n\n\n\n</div>\n"
+module.exports = "<div class=\"goodlife\">\n <!-- *ngIf=\"goodlife\" -->\n\n\n\n <svg #svgg class=\"goodlife-svg\" width=\"60vw\" height=\"100vh\"></svg>\n\n\n\n\n<ul class=\"goodlife-interview\" *ngIf=\"goodlife\">\n  <div class=\"goodlife-intro\">\n    <h1>{{goodlife.results[selected].data.interviewee[0].text}}</h1>\n    <img class=\"goodlife-image\" src=\"{{goodlife.results[selected].data.cover[0].image.url}}\" alt=\"{{goodlife.results[selected].data.interviewee[0].text}}\">\n  </div>\n  <li class=\"goodlife-li\" *ngFor=\"let e of goodlife.results[selected].data.body\">\n    <div class=\"goodlife-question\" *ngFor=\"let q of e.items\">\n      <h3>{{q.question[0].text}}</h3>\n      <p>{{q.answer[0].text}}</p>\n    </div>\n\n  </li>\n</ul>\n\n<div class=\"goodlife-gradient\">\n  <div class=\"gradient\" [ngStyle]=\"gradientStyle\">\n  </div>\n</div>\n\n  <!-- <ul class=\"goodlife-ul\" *ngFor=\"let l of goodlife.results\">\n    <div class=\"goodlife-intro\">\n      <img src=\"{{l.data.cover[0].image.url}}\" alt=\"\">\n    </div>\n    <li class=\"goodlife-li\" *ngFor=\"let e of l.data.body\">\n      <div class=\"goodlife-question\" *ngFor=\"let q of e.items\">\n        <h3>{{q.question[0].text}}</h3>\n        <p>{{q.answer[0].text}}</p>\n      </div>\n\n    </li>\n  </ul> -->\n\n\n\n\n\n</div>\n"
 
 /***/ }),
 
@@ -619,7 +619,7 @@ module.exports = "<div class=\"goodlife\">\n <!-- *ngIf=\"goodlife\" -->\n<svg #
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*....................................SCSS VARIABLES..................................*/\n/*....................................................................................*/\n/*.................................................................................*/\n/*$break-large-desktop: 2500px;*/\n/*$break-infinite: 500000px;*/\n/*....................................SCSS MIXINS..................................*/\n.goodlife {\n  height: auto; }\n.goodlife-ul {\n  width: 100%;\n  padding-bottom: 150px; }\n.goodlife-ul .goodlife-li {\n    padding-top: 150px; }\n.goodlife-ul .goodlife-li .goodlife-question {\n      margin-top: 25px; }\n.nodes {\n  width: 50vw;\n  height: 100vh;\n  position: absolute;\n  top: 0;\n  left: 10vw;\n  background-image: url(\"https://s3-us-west-2.amazonaws.com/asset.goodfight/images/7369931_orig.png\");\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  box-shadow: inset 0px 0px 40px 40px #f8f7ec; }\n.links line {\n  stroke: #999;\n  stroke-opacity: 0.6;\n  width: 100px; }\n.nodes circle {\n  stroke: #fff;\n  stroke-width: 1.5px; }\n.goodlife-interview {\n  position: relative;\n  margin-left: 60vw;\n  width: 40vw; }\n.goodlife-interview h2 {\n    color: #3076BA; }\n.goodlife-interview .goodlife-li .goodlife-question {\n    margin-top: 25px; }\n"
+module.exports = "/*....................................SCSS VARIABLES..................................*/\n/*....................................................................................*/\n/*.................................................................................*/\n/*$break-large-desktop: 2500px;*/\n/*$break-infinite: 500000px;*/\n/*....................................SCSS MIXINS..................................*/\n.goodlife {\n  height: auto; }\n.goodlife-image {\n  width: 30vw;\n  display: block; }\n.goodlife-ul {\n  width: 100%; }\n.goodlife-ul .goodlife-li {\n    padding-top: 150px; }\n.goodlife-ul .goodlife-li .goodlife-question {\n      margin-top: 25px; }\n.nodes {\n  width: 50vw;\n  height: 100vh;\n  position: absolute;\n  top: 0;\n  left: 10vw;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  box-shadow: inset 0px 0px 40px 40px #f8f7ec; }\n.links line {\n  stroke: #999;\n  stroke-opacity: 0.6;\n  width: 100px; }\n.nodes circle {\n  stroke: #fff;\n  stroke-width: 1.5px; }\n.goodlife-interview {\n  position: fixed;\n  overflow-y: scroll;\n  left: 60vw;\n  width: 40vw;\n  height: 100vh;\n  top: 0;\n  padding-bottom: 150px; }\n.goodlife-interview h2 {\n    color: #3076BA; }\n.goodlife-interview .goodlife-li .goodlife-question {\n    margin-top: 25px; }\n:host {\n  position: relative; }\n.gradient {\n  position: absolute; }\n.content {\n  position: relative; }\n.goodlife-gradient {\n  position: fixed;\n  top: 0;\n  left: 10vw;\n  width: 50vw;\n  height: 100vh;\n  overflow: hidden;\n  z-index: -1; }\n.gradient {\n  position: absolute;\n  background: linear-gradient(#e66465, #9198e5);\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  transition: width 0.2s ease, height 0.2s ease; }\n"
 
 /***/ }),
 
@@ -656,16 +656,19 @@ var GoodlifeComponent = /** @class */ (function () {
     // chartElement: ElementRef;
     function GoodlifeComponent(
     // elementRef: ElementRef,
-    _globalService, _prismicService) {
+    _globalService, _prismicService, el) {
         this._globalService = _globalService;
         this._prismicService = _prismicService;
+        this.el = el;
         this.radius = 10;
         this._this = this;
+        this.isGradientVisible = false;
     }
     GoodlifeComponent.prototype.onResize = function (event) {
         this.innerWidth = window.innerWidth / 2;
         this.innerHeight = window.innerHeight;
     };
+    // first function upn start
     GoodlifeComponent.prototype.ngOnInit = function () {
         this._globalService.setLoading(true);
         if (!this.goodlife) {
@@ -676,6 +679,7 @@ var GoodlifeComponent = /** @class */ (function () {
         }
     };
     GoodlifeComponent.prototype.ngAfterViewInit = function () {
+        this.gradientRadius = this.el.nativeElement.getBoundingClientRect().width;
     };
     GoodlifeComponent.prototype.onMouseover = function () {
         var _this = this;
@@ -723,10 +727,11 @@ var GoodlifeComponent = /** @class */ (function () {
     GoodlifeComponent.prototype.force = function (interviews) {
         var nodes_data = interviews;
         var links_data = [
-            { "source": "lingchou", "target": "yukimatsuda", "type": "A", "distance": 240 },
-            { "source": "yukimatsuda", "target": "noellecornelio", "type": "A", "distance": 250 },
-            { "source": "noellecornelio", "target": "joshwarner", "type": "E", "distance": 370 }
-            // {"source": "joshwarner", "target": "lingchou", "type":"A", "distance":370}
+            { "source": "lingchou", "target": "yukimatsuda", "type": "A", "distance": 40 },
+            { "source": "yukimatsuda", "target": "noellecornelio", "type": "A", "distance": 50 },
+            { "source": "noellecornelio", "target": "joshwarner", "type": "A", "distance": 70 },
+            { "source": "joshwarner", "target": "aaronhutcherson", "type": "A", "distance": 50 }
+            // {"source": "aaronhutcherson", "target": "lingchou", "type":"E", "distance":570}
         ];
         var svg = d3__WEBPACK_IMPORTED_MODULE_3__["select"](this.svgg.nativeElement), width = this.innerWidth / 2, height = this.innerHeight;
         // +svg.attr("width"),
@@ -739,7 +744,7 @@ var GoodlifeComponent = /** @class */ (function () {
         //also going to add a centering force
         simulation
             .force("charge_force", d3__WEBPACK_IMPORTED_MODULE_3__["forceManyBody"]())
-            .force("center_force", d3__WEBPACK_IMPORTED_MODULE_3__["forceCenter"](width / 2, height / 2));
+            .force("center_force", d3__WEBPACK_IMPORTED_MODULE_3__["forceCenter"]((width / 2), (height / 2)));
         //draw circles for the nodes
         var node = svg
             .attr("class", "nodes")
@@ -764,10 +769,10 @@ var GoodlifeComponent = /** @class */ (function () {
         //       console.log(svg);
         //     };
         // };
-        node.append("image")
-            .attr("xlink:href", function (d) { return d.data.cover[0].image.url; })
-            .attr("width", 100)
-            .attr("height", 100);
+        // node.append("image")
+        //     .attr("xlink:href",  function(d:any) { return d.data.cover[0].image.url;})
+        //     .attr("width", 100)
+        //     .attr("height", 100)
         //add interviewee
         node.append("text")
             .text(function (d) { return d.data.interviewee[0].text; });
@@ -850,6 +855,32 @@ var GoodlifeComponent = /** @class */ (function () {
         }
         drag_handler(node);
     }; //end of d3 fn
+    // gradient
+    GoodlifeComponent.prototype.onMouseEnter = function () {
+        this.isGradientVisible = true;
+    };
+    GoodlifeComponent.prototype.onMouseLeave = function () {
+        this.isGradientVisible = false;
+    };
+    GoodlifeComponent.prototype.onMouseMove = function (event) {
+        this.gradientLeft = event.pageX - this.el.nativeElement.offsetLeft;
+        this.gradientTop = event.pageY - this.el.nativeElement.offsetTop;
+    };
+    Object.defineProperty(GoodlifeComponent.prototype, "gradientStyle", {
+        get: function () {
+            var top = this.gradientTop;
+            var left = this.gradientLeft;
+            var gradientRadius = this.isGradientVisible ? this.gradientRadius : 0;
+            return {
+                'height.px': gradientRadius * 1.2,
+                'width.px': gradientRadius * 1.2,
+                'top.px': top
+                // 'left.px': left
+            };
+        },
+        enumerable: true,
+        configurable: true
+    });
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('svgg'),
         __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
@@ -860,6 +891,24 @@ var GoodlifeComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], GoodlifeComponent.prototype, "onResize", null);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('mouseenter'),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], GoodlifeComponent.prototype, "onMouseEnter", null);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('mouseleave'),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], GoodlifeComponent.prototype, "onMouseLeave", null);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('mousemove', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [MouseEvent]),
+        __metadata("design:returntype", void 0)
+    ], GoodlifeComponent.prototype, "onMouseMove", null);
     GoodlifeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-goodlife',
@@ -867,7 +916,8 @@ var GoodlifeComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./goodlife.component.scss */ "./src/app/goodlife/goodlife.component.scss")]
         }),
         __metadata("design:paramtypes", [_shared_variables_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"],
-            _shared_prismic_service__WEBPACK_IMPORTED_MODULE_1__["PrismicService"]])
+            _shared_prismic_service__WEBPACK_IMPORTED_MODULE_1__["PrismicService"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]])
     ], GoodlifeComponent);
     return GoodlifeComponent;
 }());
@@ -1181,7 +1231,7 @@ var LogotypeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"nav\"  >\n<!-- [@navState]=\"_globalService.navState\" -->\n\n\n<ul class=\"nav-top\">\n  <li class=\"nav-li\">\n    <a href=\"https://gdfht.com/cart\" class=\"nav-a\" routerLinkActive=\"active-link\">\n      <h2>Cart</h2>\n    </a>\n  </li>\n  <li class=\"nav-li\">\n    <a href=\"https://gdfht.com/account/login\" class=\"nav-a\" routerLinkActive=\"active-link\">\n      <h2>Login</h2>\n    </a>\n  </li>\n  <li class=\"nav-li\">\n    <a href=\"https://gdfht.com/account/register\" class=\"nav-a\" routerLinkActive=\"active-link\">\n      <h2>Create Account</h2>\n    </a>\n  </li>\n</ul>\n\n<ul class=\"nav-main\">\n  <li class=\"nav-li\">\n    <a href=\"https://gdfht.com/\" class=\"nav-a\" [class.nav_active]=\"route === '/goodlife'\" [class.blacked_text]=\"_globalService.isStyling  && !_matchMediaService.IsPhone()\">\n      <h2>Shop</h2>\n    </a>\n  </li>\n  <li class=\"nav-li\">\n    <a [routerLink]=\"['/goodlife']\" class=\"nav-a\" [class.nav_active]=\"route === '/goodlife'\" routerLinkActive=\"active-link\">\n      <h2>Goodlife</h2>\n    </a>\n  </li>\n  <li class=\"nav-li\">\n    <a [routerLink]=\"['/editorial']\" class=\"nav-a\" [class.nav_active]=\"route === '/editorial'\" routerLinkActive=\"active-link\">\n      <h2>Editorial</h2>\n    </a>\n  </li>\n  <li class=\"nav-li\">\n    <a [routerLink]=\"['/press']\" class=\"nav-a\" [class.nav_active]=\"route === '/press'\" [class.blacked_text]=\"_globalService.isStyling  && !_matchMediaService.IsPhone()\">\n      <h2>Press</h2>\n    </a>\n  </li>\n</ul>\n\n<div class=\"nav-logo\">\n  <a [routerLink]=\"['/']\" class=\"nav-a\" [class.nav_active]=\"route === '/'\" [class.blacked_text]=\"_globalService.isStyling  && !_matchMediaService.IsPhone()\">\n    <app-logo></app-logo>\n  </a>\n</div>\n\n   <ul class=\"nav-sub\">\n\n     <li class=\"nav-li\">\n       <a href=\"https://gdfht.com/pages/subscribe\" class=\"nav-a\">\n          <h2>Subscribe</h2>\n       </a>\n     </li>\n     <li class=\"nav-li\">\n       <a href=\"https://gdfht.com/pages/customer-service\" class=\"nav-a\">\n          <h2>Customer Service</h2>\n       </a>\n     </li>\n     <li class=\"nav-li\">\n       <a\n         [routerLink]=\"['/contact']\"\n         fragment=\"contact\"\n         class=\"nav-a\"\n         (click)=\"_globalService.toggleNav()\">\n         <h2>Contact</h2>\n       </a>\n     </li>\n     <li class=\"nav-li\">\n       <a href=\"https://www.instagram.com/gdfht\" target=\"_blank\">ig</a>\n     </li>\n   </ul>\n\n   <ul class=\"nav-legal\">\n\n     <li class=\"nav-li\">\n       <a href=\"https://gdfht.com/pages/terms-conditions\" class=\"nav-a\"><h2>Terms</h2></a>\n       -\n       <a href=\"https://gdfht.com/pages/privacy-policy\" class=\"nav-a\"><h2>Privacy Policy</h2></a>\n     </li>\n   </ul>\n\n\n</nav>\n"
+module.exports = "<nav class=\"nav\"  >\n<!-- [@navState]=\"_globalService.navState\" -->\n\n\n<ul class=\"nav-top\">\n  <li class=\"nav-li\">\n    <a href=\"https://gdfht.com/cart\" class=\"nav-a\" routerLinkActive=\"active-link\">\n      <h2>Cart</h2>\n    </a>\n  </li>\n  <li class=\"nav-li\">\n    <a href=\"https://gdfht.com/account/login\" class=\"nav-a\" routerLinkActive=\"active-link\">\n      <h2>Login</h2>\n    </a>\n  </li>\n  <li class=\"nav-li\">\n    <a href=\"https://gdfht.com/account/register\" class=\"nav-a\" routerLinkActive=\"active-link\">\n      <h2>Create Account</h2>\n    </a>\n  </li>\n</ul>\n\n<ul class=\"nav-main\">\n  <li class=\"nav-li\">\n    <a href=\"https://gdfht.com/\" class=\"nav-a\" [class.nav_active]=\"route === '/goodlife'\" [class.blacked_text]=\"_globalService.isStyling  && !_matchMediaService.IsPhone()\">\n      <h2>Shop</h2>\n    </a>\n  </li>\n  <li class=\"nav-li\">\n    <a [routerLink]=\"['/goodlife']\" class=\"nav-a\" [class.nav_active]=\"route === '/goodlife'\" routerLinkActive=\"active-link\">\n      <h2>Goodlife</h2>\n    </a>\n  </li>\n  <!-- <li class=\"nav-li\">\n    <a [routerLink]=\"['/editorial']\" class=\"nav-a\" [class.nav_active]=\"route === '/editorial'\" routerLinkActive=\"active-link\">\n      <h2>Editorial</h2>\n    </a>\n  </li>\n  <li class=\"nav-li\">\n    <a [routerLink]=\"['/press']\" class=\"nav-a\" [class.nav_active]=\"route === '/collections'\" [class.blacked_text]=\"_globalService.isStyling  && !_matchMediaService.IsPhone()\">\n      <h2>Collections</h2>\n    </a>\n  </li> -->\n</ul>\n\n<div class=\"nav-logo\">\n  <a [routerLink]=\"['/']\" class=\"nav-a\" [class.nav_active]=\"route === '/'\" [class.blacked_text]=\"_globalService.isStyling  && !_matchMediaService.IsPhone()\">\n    <app-logo></app-logo>\n  </a>\n</div>\n\n   <ul class=\"nav-sub\">\n\n     <li class=\"nav-li\">\n       <a href=\"https://gdfht.com/pages/subscribe\" class=\"nav-a\">\n          <h2>Subscribe</h2>\n       </a>\n     </li>\n     <li class=\"nav-li\">\n       <a href=\"https://gdfht.com/pages/customer-service\" class=\"nav-a\">\n          <h2>Customer Service</h2>\n       </a>\n     </li>\n     <li class=\"nav-li\">\n       <a\n         [routerLink]=\"['/contact']\"\n         fragment=\"contact\"\n         class=\"nav-a\"\n         (click)=\"_globalService.toggleNav()\">\n         <h2>Contact</h2>\n       </a>\n     </li>\n     <li class=\"nav-li\">\n       <a href=\"https://www.instagram.com/gdfht\" target=\"_blank\">ig</a>\n     </li>\n   </ul>\n\n   <ul class=\"nav-legal\">\n\n     <li class=\"nav-li\">\n       <a href=\"https://gdfht.com/pages/terms-conditions\" class=\"nav-a\"><h2>Terms</h2></a>\n       -\n       <a href=\"https://gdfht.com/pages/privacy-policy\" class=\"nav-a\"><h2>Privacy Policy</h2></a>\n     </li>\n   </ul>\n\n\n</nav>\n"
 
 /***/ }),
 

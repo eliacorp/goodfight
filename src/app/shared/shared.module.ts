@@ -8,7 +8,6 @@ import {EncodeURIPipe} from './encodeURI.pipe';
 import {SafePipe} from './safeUrl.pipe';
 import {YoutubeEmbedPipe} from './youtubeEmbed.pipe';
 
-
 @NgModule({
   declarations: [
     SafePipe,

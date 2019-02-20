@@ -1,12 +1,17 @@
 <div class="goodlife">
  <!-- *ngIf="goodlife" -->
-<svg #svgg class="goodlife-svg" width="60vw" height="100vh"></svg>
+
+
+
+ <svg #svgg class="goodlife-svg" width="60vw" height="100vh"></svg>
+
+
 
 
 <ul class="goodlife-interview" *ngIf="goodlife">
   <div class="goodlife-intro">
     <h1>{{goodlife.results[selected].data.interviewee[0].text}}</h1>
-    <!-- <img src="{{goodlife.results[selected].data.cover[0].image.url}}" alt=""> -->
+    <img class="goodlife-image" src="{{goodlife.results[selected].data.cover[0].image.url}}" alt="{{goodlife.results[selected].data.interviewee[0].text}}">
   </div>
   <li class="goodlife-li" *ngFor="let e of goodlife.results[selected].data.body">
     <div class="goodlife-question" *ngFor="let q of e.items">
@@ -16,6 +21,11 @@
 
   </li>
 </ul>
+
+<div class="goodlife-gradient">
+  <div class="gradient" [ngStyle]="gradientStyle">
+  </div>
+</div>
 
   <!-- <ul class="goodlife-ul" *ngFor="let l of goodlife.results">
     <div class="goodlife-intro">

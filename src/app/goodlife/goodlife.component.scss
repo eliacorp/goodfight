@@ -5,13 +5,16 @@
   // width:calc(100vw - 250px);
   height: auto;
   // margin-left: 250px;
-
-
 }
 
+
+.goodlife-image{
+  width: 30vw;
+  display: block;
+}
 .goodlife-ul{
   width:100%;
-  padding-bottom: $margin-top-li;
+
   .goodlife-li{
     padding-top: $margin-top-li;
     .goodlife-question{
@@ -26,12 +29,11 @@
   position: absolute;
   top:0;
   left:10vw;
-  background-image: url("https://s3-us-west-2.amazonaws.com/asset.goodfight/images/7369931_orig.png");
+  // background-image: url("https://s3-us-west-2.amazonaws.com/asset.goodfight/images/7369931_orig.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0px 0px 40px 40px #f8f7ec;
-
 }
 
 
@@ -52,9 +54,13 @@
 }
 
 .goodlife-interview{
-  position: relative;
-  margin-left: 60vw;
+  position: fixed;
+  overflow-y:scroll;
+  left: 60vw;
   width:40vw;
+  height: 100vh;
+  top:0;
+    padding-bottom: $margin-top-li;
   h2{
     color:$blue;
   }
@@ -65,3 +71,36 @@
     }
   }
 }
+
+
+// .goodlife-svg{
+//   position: soluate;
+// }
+
+:host {
+        position: relative;
+      }
+
+      .gradient {
+        position: absolute;
+      }
+      .content {
+        position: relative;
+      }
+
+.goodlife-gradient{
+  position: fixed;
+  top:0;
+  left:10vw;
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+.gradient {
+   position: absolute;
+   background:linear-gradient(#e66465, #9198e5);
+   // background: radial-gradient(circle closest-side, #000000, transparent);
+   transform: translate(-50%, -50%);
+   transition: width 0.2s ease, height 0.2s ease;
+ }
