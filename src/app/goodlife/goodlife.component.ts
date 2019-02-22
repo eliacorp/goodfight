@@ -119,9 +119,8 @@ force(interviews){
 
   var nodes_data = interviews;
  var links_data = [
-   {"source": "lingchou", "target": "yukimatsuda", "type":"A", "distance":70},
-    {"source": "yukimatsuda", "target": "yulinchu", "type":"A", "distance":100},
-    {"source": "yulinchu", "target": "lingchou", "type":"A", "distance":50},
+   {"source": "yukimatsuda", "target": "lingchou", "type":"A", "distance":100},
+   {"source": "lingchou", "target": "yulinchu", "type":"A", "distance":70},
 
     // {"source": "noellecornelio", "target": "", "type":"A", "distance":80},
     // {"source": "joshwarner", "target": "", "type":"A", "distance":180}
@@ -303,7 +302,7 @@ function drag_end(d:any) {
   d.fy = null;
 }
 
-// drag_handler(node);
+drag_handler(node);
 
 }//end of d3 fn
 

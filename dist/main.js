@@ -730,9 +730,8 @@ var GoodlifeComponent = /** @class */ (function () {
     GoodlifeComponent.prototype.force = function (interviews) {
         var nodes_data = interviews;
         var links_data = [
-            { "source": "lingchou", "target": "yukimatsuda", "type": "A", "distance": 70 },
-            { "source": "yukimatsuda", "target": "yulinchu", "type": "A", "distance": 100 },
-            { "source": "yulinchu", "target": "lingchou", "type": "A", "distance": 50 },
+            { "source": "yukimatsuda", "target": "lingchou", "type": "A", "distance": 100 },
+            { "source": "lingchou", "target": "yulinchu", "type": "A", "distance": 70 },
         ];
         if (this._matchMediaService.IsPhone()) {
             width = this.innerWidth / 2;
@@ -865,7 +864,7 @@ var GoodlifeComponent = /** @class */ (function () {
             d.fx = null;
             d.fy = null;
         }
-        // drag_handler(node);
+        drag_handler(node);
     }; //end of d3 fn
     // gradient
     GoodlifeComponent.prototype.onMouseEnter = function () {
