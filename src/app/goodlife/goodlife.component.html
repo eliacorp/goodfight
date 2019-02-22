@@ -1,6 +1,12 @@
 <div class="goodlife">
  <!-- *ngIf="goodlife" -->
 
+<div (click)="showInfo=!showInfo" class="info">
+  <button type="button" name="button" class="info-btn"><h1>Good Life &#8595;</h1></button>
+  <span class="info-text" *ngIf="showInfo">
+     <p>is an ongoing conversation with special people in our community that provides a deeper look into what makes the brand what it is. We've always understood that we are the sum of the people around us, and the gamut of our network is diverse in age, vocation, interest, etc. Each discourse ends with the subject leaving a question for the next person without know who they are, creating an unbroken line of story between people who are mostly complete strangers, but unwittingly connected through various relationships in our community. It's a fitting illustration of our rich group of friends and family whose unique influences shape the strange world we call Goodfight.
+  </span>
+</div>
 
 
  <svg #svgg class="goodlife-svg" ></svg>

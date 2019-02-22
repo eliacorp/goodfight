@@ -162,7 +162,8 @@ var node = svg
         .selectAll("g")
         .data(nodes_data)
         .enter()
-        .append("g");
+        .append("g")
+        .attr("class", "nodes-g");
 
 
 
@@ -225,8 +226,6 @@ var node = svg
           .enter().append("line")
           .attr("stroke-width", 2)
           .style("stroke", linkColour);
-
-
 
     //Function to choose the line colour and thickness
     //If the link type is "A" return green

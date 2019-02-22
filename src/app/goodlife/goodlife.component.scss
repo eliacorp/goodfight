@@ -42,11 +42,15 @@
   }
 }
 
+.nodes-g{
+  cursor: pointer;
+}
 
 // .active {
 //   stroke: #000;
 //   stroke-width: 2px;
 // }
+
 
 .links line {
   stroke: #999;
@@ -126,4 +130,35 @@
      left:0!important;
      width:0!important;
    }
+ }
+
+ g{
+   cursor: pointer;
+ }
+
+.info{
+  position: fixed;
+  top:20px;
+  left:15vw;
+  z-index:99;
+  background-color: rgba(0,0,0,0.0);
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 40vw;
+  transition:         all $transition-slow ease;
+  -webkit-transition: all $transition-slow ease;
+  -moz-transition:    all $transition-slow ease;
+  -ms-transition:     all $transition-slow ease;
+  -o-transition:      all $transition-slow ease;
+}
+ .info-btn{
+
+ }
+
+ .info-text{
+   position: relative;
+   display: block;
+   width:auto;
+   color: pink;
+   word-break: normal;
  }
