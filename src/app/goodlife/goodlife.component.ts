@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, Inject, EventEmitter, Output, ElementRef, ViewChild } from '@angular/core';
 import {PrismicService} from '../shared/prismic.service';
 import {GlobalService} from '../shared/variables.service';
+import {MatchMediaService} from '../shared/match-media.service';
 import { Location } from '@angular/common';
 import { DOCUMENT } from '@angular/platform-browser';
 import {IGoodlife } from './goodlife';
@@ -41,7 +42,8 @@ export class GoodlifeComponent implements OnInit {
     // elementRef: ElementRef,
     private _globalService: GlobalService,
     private _prismicService: PrismicService,
-    public el: ElementRef<HTMLElement>
+    public el: ElementRef<HTMLElement>,
+    private _matchMediaService: MatchMediaService
   ){}
 // first function upn start
   ngOnInit() {
@@ -117,19 +119,27 @@ force(interviews){
 
   var nodes_data = interviews;
  var links_data = [
-   {"source": "lingchou", "target": "yukimatsuda", "type":"A", "distance":40},
-    {"source": "yukimatsuda", "target": "noellecornelio", "type":"A", "distance":50},
-    {"source": "noellecornelio", "target": "joshwarner", "type":"A", "distance":70},
-    {"source": "joshwarner", "target": "aaronhutcherson", "type":"A", "distance":50}
-    // {"source": "aaronhutcherson", "target": "lingchou", "type":"E", "distance":570}
+   {"source": "lingchou", "target": "yukimatsuda", "type":"A", "distance":70},
+    {"source": "yukimatsuda", "target": "yulinchu", "type":"A", "distance":100},
+    {"source": "yulinchu", "target": "lingchou", "type":"A", "distance":50},
 
+    // {"source": "noellecornelio", "target": "", "type":"A", "distance":80},
+    // {"source": "joshwarner", "target": "", "type":"A", "distance":180}
 ]
 
+if(this._matchMediaService.IsPhone()){
+  width = this.innerWidth/2
+  height = this.innerHeight/1.5
+}else{
+  width = this.innerWidth/2
+  height = this.innerHeight
+}
+
+var svg = d3.select(this.svgg.nativeElement),
+   width,
+    height
 
 
-  var svg = d3.select(this.svgg.nativeElement),
-     width = this.innerWidth/2,
-      height = this.innerHeight
      // +svg.attr("width"),
 
 

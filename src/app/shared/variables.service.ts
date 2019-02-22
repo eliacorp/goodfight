@@ -12,9 +12,7 @@ export class GlobalService {
     public scrollPosition: number = 0;
     public logoOpacity: number = 1;
     public isHome:boolean;
-
-
-   @Input() navState='0';
+   @Input() isNav='0';
 
     constructor(private _matchMediaService: MatchMediaService){}
 
@@ -35,21 +33,19 @@ export class GlobalService {
 
     toggleNav(){
 
-      this.navState=='0' ? this.navState='1' : this.navState='0';
+        if(this._matchMediaService.IsPhone()){
+          if(this.isNav=='0'){this.isNav='1'}
+          else{this.isNav='0'}
+        }else{
+          this.isNav='3';
+        }
 
-      // if(this._matchMediaService.IsPhone()){
-      //   if(this.navState=='0'){this.navState='1'}
-      //   else{this.navState='0'}
-      // }else{
-      //   this.navState='3';
-      // }
+        console.log(this.isNav);
+        // if(DEVICES_DIRECTIVES.devices_directives_1.isMobile){
+        //
+        // }
 
-      console.log(this.navState);
-      // if(DEVICES_DIRECTIVES.devices_directives_1.isMobile){
-      //
-      // }
-
-    }
+      }
 
 
 

@@ -1,5 +1,6 @@
-<nav class="nav"  >
-<!-- [@navState]="_globalService.navState" -->
+<nav class="nav" [@navState]="_globalService.isNav" (click)="_globalService.toggleNav()">
+
+  <!-- <div class="pop"   *xs>menu</div> -->
 
 
 <ul class="nav-top">

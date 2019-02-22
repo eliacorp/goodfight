@@ -544,9 +544,9 @@ $transition-slow: 1s;
   font-weight: bold;
   color:$blue;
   // text-transform: uppercase;
-  @include respond-to(phone){
-    font-size: $font-size-h1-mobile;
-  }
+  // @include respond-to(phone){
+  //   font-size: $font-size-h1-mobile;
+  // }
 }
 @mixin h2(){
   font-size: $font-size-h2;
@@ -555,10 +555,10 @@ $transition-slow: 1s;
   letter-spacing: $letter-spacing-h2;
   // text-transform: uppercase;
   // font-weight: 400!important;
-  @include respond-to(phone){
-    font-size: $font-size-h2-mobile;
-    line-height: $line-height-h2-mobile;
-  }
+  // @include respond-to(phone){
+  //   font-size: $font-size-h2-mobile;
+  //   line-height: $line-height-h2-mobile;
+  // }
 }
 
 @mixin h3(){
@@ -568,10 +568,10 @@ $transition-slow: 1s;
   letter-spacing: $letter-spacing-h3;
   // text-transform: uppercase;
   // font-weight: 400!important;
-  @include respond-to(phone){
-    font-size: $font-size-h3-mobile;
-    line-height: $line-height-h3-mobile;
-  }
+  // @include respond-to(phone){
+  //   font-size: $font-size-h3-mobile;
+  //   line-height: $line-height-h3-mobile;
+  // }
 }
 
 @mixin p(){
@@ -582,10 +582,10 @@ $transition-slow: 1s;
   letter-spacing: $letter-spacing-p;
   font-weight: 400;
   text-align: left;
-  @include respond-to(phone){
-    font-size: $font-size-p-mobile;
-    line-height: $line-height-p-mobile;
-  }
+  // @include respond-to(phone){
+  //   font-size: $font-size-p-mobile;
+  //   line-height: $line-height-p-mobile;
+  // }
 }
 
 @mixin p2(){
@@ -595,10 +595,10 @@ $transition-slow: 1s;
   font-weight: 400;
   letter-spacing: $letter-spacing-p2;
   text-align: left;
-  @include respond-to(phone){
-    font-size: $font-size-p2-mobile;
-    line-height: $line-height-p2-mobile;
-  }
+  // @include respond-to(phone){
+  //   font-size: $font-size-p2-mobile;
+  //   line-height: $line-height-p2-mobile;
+  // }
 }
 
 @mixin fullpageflex($color){

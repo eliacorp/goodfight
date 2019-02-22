@@ -17,7 +17,30 @@ import {
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
+  animations: [
+    trigger('navState', [
+      state('0', style({
+        top:'0'
+      })),
+      state('1',   style({
+        top:'90vh'
+      })),
+      state('3',   style({
+        top:'auto'
+      })),
+      transition('0 => 1', animate('500ms ease-in')),
+      transition('1 => 0', animate('500ms ease-out'))
+    ]),
+    trigger('navUlState', [
+      state('0', style({
+      })),
+      state('1',   style({
+      })),
+      transition('0 => 1', animate('500ms ease-in')),
+      transition('1 => 0', animate('500ms ease-out'))
+    ])
+  ]
 })
 
 export class NavComponent implements OnInit {
@@ -47,8 +70,7 @@ export class NavComponent implements OnInit {
 
 
       ngOnInit() {
-        // this._globalService.toggleNav();
-
+        this._globalService.toggleNav();
       }
 
       gotoHashtag(fragment: string) {

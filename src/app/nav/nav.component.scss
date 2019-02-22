@@ -7,17 +7,37 @@
   width: 230px;
   height: 100vh;
   margin-left: 20px;
+  @include respond-to(phone) {
+      width: 100vw;
+      height: 100vh;
+      top:90vh;
+      border-top: 1px solid black;
+      background: rgba(255,255,255,0.8);
+      margin-left: 0;
+      left: 0;
+  }
 }
 
 .nav-top{
   width: 100%;
   height:20vh;
+  @include respond-to(phone) {
+    margin-left: 20px;
+    position: relative;
+    margin-top: 10vh;
+
+  }
 }
 
 .nav-main{
   width: 100%;
   height:20vh;
   margin-top: 20vh;
+  @include respond-to(phone) {
+    margin-left: 20px;
+    margin-top: 10vh;
+    height: 15vh;
+  }
 }
 
 .nav-logo{
@@ -25,10 +45,19 @@
   height:auto;
   display:block;
   padding:60px 0;
+  @include respond-to(phone) {
+    left: 20px;
+    position: absolute;
+    top:20px;
+    padding: 0;
+  }
 }
 
 .nav-legal{
     margin-top: 20px;
+    @include respond-to(phone) {
+      margin-left: 20px;
+    }
   a{
     display: inline-block;
   }
@@ -44,7 +73,7 @@
   @include respond-to(phone){
     width: 80vw;
     display: block;
-    margin: auto;
+    margin-left: 20px;
   }
   .nav-li{
     // width: 100px;
