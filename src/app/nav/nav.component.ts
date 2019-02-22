@@ -21,10 +21,10 @@ import {
   animations: [
     trigger('navState', [
       state('0', style({
-        top:'0'
+        transform:'translateY(0vh)'
       })),
       state('1',   style({
-        top:'90vh'
+        transform:'translateY(90vh)'
       })),
       state('3',   style({
         top:'auto'

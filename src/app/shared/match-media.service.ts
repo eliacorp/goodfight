@@ -67,83 +67,83 @@ export class MatchMediaService
 /**********************************************
     EVENT LISTENERS BY TYPE
  **********************************************/
-    OnPhone(callBack)
-    {
-        if (typeof callBack === 'function')
-        {
-            var mql: MediaQueryList = window.matchMedia(this.rules.phone);
+    // OnPhone(callBack)
+    // {
+    //     if (typeof callBack === 'function')
+    //     {
+    //         var mql: MediaQueryList = window.matchMedia(this.rules.phone);
+    //
+    //         mql.addListener((mql: MediaQueryList) =>
+    //         {
+    //             if (mql.matches)
+    //             {
+    //                 callBack(mql);
+    //             }
+    //         });
+    //     }
+    // };
 
-            mql.addListener((mql: MediaQueryList) =>
-            {
-                if (mql.matches)
-                {
-                    callBack(mql);
-                }
-            });
-        }
-    };
+    // OnTablet(callBack)
+    // {
+    //     if (typeof callBack === 'function')
+    //     {
+    //         var mql: MediaQueryList = window.matchMedia(this.rules.tablet);
+    //
+    //         mql.addListener((mql: MediaQueryList) =>
+    //         {
+    //             if (mql.matches)
+    //             {
+    //                 callBack(mql);
+    //             }
+    //         });
+    //     }
+    // };
+    //
+    // OnDesktop(callBack)
+    // {
+    //     if (typeof callBack === 'function')
+    //     {
+    //         var mql: MediaQueryList = window.matchMedia(this.rules.desktop);
+    //
+    //         mql.addListener((mql: MediaQueryList) =>
+    //         {
+    //             if (mql.matches)
+    //             {
+    //                 callBack(mql);
+    //             }
+    //         });
+    //     }
+    // };
 
-    OnTablet(callBack)
-    {
-        if (typeof callBack === 'function')
-        {
-            var mql: MediaQueryList = window.matchMedia(this.rules.tablet);
-
-            mql.addListener((mql: MediaQueryList) =>
-            {
-                if (mql.matches)
-                {
-                    callBack(mql);
-                }
-            });
-        }
-    };
-
-    OnDesktop(callBack)
-    {
-        if (typeof callBack === 'function')
-        {
-            var mql: MediaQueryList = window.matchMedia(this.rules.desktop);
-
-            mql.addListener((mql: MediaQueryList) =>
-            {
-                if (mql.matches)
-                {
-                    callBack(mql);
-                }
-            });
-        }
-    };
-
-    OnPortrait(callBack)
-    {
-        if (typeof callBack === 'function')
-        {
-            var mql: MediaQueryList = window.matchMedia(this.rules.portrait);
-
-            mql.addListener((mql: MediaQueryList) =>
-            {
-                if (mql.matches)
-                {
-                    callBack(mql);
-                }
-            });
-        }
-    };
-
-    OnLandscape(callBack)
-    {
-        if (typeof callBack === 'function')
-        {
-            var mql: MediaQueryList = window.matchMedia(this.rules.landscape);
-
-            mql.addListener((mql: MediaQueryList) =>
-            {
-                if (mql.matches)
-                {
-                    callBack(mql);
-                }
-            });
-        }
-    };
+    // OnPortrait(callBack)
+    // {
+    //     if (typeof callBack === 'function')
+    //     {
+    //         var mql: MediaQueryList = window.matchMedia(this.rules.portrait);
+    //
+    //         mql.addListener((mql: MediaQueryList) =>
+    //         {
+    //             if (mql.matches)
+    //             {
+    //                 callBack(mql);
+    //             }
+    //         });
+    //     }
+    // };
+    //
+    // OnLandscape(callBack)
+    // {
+    //     if (typeof callBack === 'function')
+    //     {
+    //         var mql: MediaQueryList = window.matchMedia(this.rules.landscape);
+    //
+    //         mql.addListener((mql: MediaQueryList) =>
+    //         {
+    //             if (mql.matches)
+    //             {
+    //                 callBack(mql);
+    //             }
+    //         });
+    //     }
+    // };
 }
