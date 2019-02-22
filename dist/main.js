@@ -685,9 +685,9 @@ var GoodlifeComponent = /** @class */ (function () {
         this.gradientRadius = this.el.nativeElement.getBoundingClientRect().width;
     };
     GoodlifeComponent.prototype.onMouseover = function () {
-        var _this = this;
+        var _this_1 = this;
         return function (d, i) {
-            _this.selected = d.index;
+            _this_1.selected = d.index;
             // d3.select(d3.event.currentTarget).style({
             //     'fill': 'yellow'
             // });
@@ -695,22 +695,22 @@ var GoodlifeComponent = /** @class */ (function () {
         };
     };
     GoodlifeComponent.prototype.getPage = function (page) {
-        var _this = this;
+        var _this_1 = this;
         this._prismicService.getList('goodlif', page)
             .subscribe(function (data) {
             if (page == 1) {
-                _this.goodlife = data;
+                _this_1.goodlife = data;
                 console.log(data);
-                _this._globalService.setLoading(false);
-                _this.force(_this.goodlife.results);
+                _this_1._globalService.setLoading(false);
+                _this_1.force(_this_1.goodlife.results);
             }
             else {
                 console.log('in else block');
             }
         }, function (error) {
             console.log('there was an error');
-            _this.errorMessage = error;
-            _this._globalService.setLoading(false);
+            _this_1.errorMessage = error;
+            _this_1._globalService.setLoading(false);
         });
     };
     GoodlifeComponent.prototype.colorMe = function () {
@@ -784,6 +784,9 @@ var GoodlifeComponent = /** @class */ (function () {
         //     .attr("height", 100)
         //add interviewee
         node.append("text")
+            // .attr("x", 0 )
+            // .attr("y", 0)
+            // .attr("dy", ".35em")
             .text(function (d) { return d.data.interviewee[0].text; });
         //add interview
         node.append("text")
@@ -862,7 +865,7 @@ var GoodlifeComponent = /** @class */ (function () {
             d.fx = null;
             d.fy = null;
         }
-        drag_handler(node);
+        // drag_handler(node);
     }; //end of d3 fn
     // gradient
     GoodlifeComponent.prototype.onMouseEnter = function () {

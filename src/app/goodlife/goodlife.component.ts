@@ -303,7 +303,7 @@ function drag_end(d:any) {
   d.fy = null;
 }
 
-drag_handler(node);
+// drag_handler(node);
 
 }//end of d3 fn
 
