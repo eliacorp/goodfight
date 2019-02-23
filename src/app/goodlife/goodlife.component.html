@@ -17,8 +17,11 @@
   <div class="goodlife-intro">
     <h1>{{goodlife.results[selected].data.interviewee[0].text}}</h1>
     <img class="goodlife-image" src="{{goodlife.results[selected].data.cover[0].image.url}}" alt="{{goodlife.results[selected].data.interviewee[0].text}}">
-    <p class="p2">{{goodlife.results[selected].data.title[0]?.text}}</p>
-    <!-- <p>company: {{goodlife.results[selected].data.company[0].text}}</p> -->
+    <p>{{goodlife.results[selected].data.title[0]?.text}}</p>
+
+    <p *ngIf="goodlife.results[selected].data.company[0]?.text">company: {{goodlife.results[selected].data.company[0]?.text}}</p>
+    <a href="{{goodlife.results[selected].data.web?.url}}">web   </a>
+    <a href="{{goodlife.results[selected].data.instagram?.url}}">@</a>
   </div>
   <li class="goodlife-li" *ngFor="let e of goodlife.results[selected].data.body">
     <div class="goodlife-question" *ngFor="let q of e.items">
