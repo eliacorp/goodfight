@@ -1,12 +1,12 @@
 <div class="goodlife">
  <!-- *ngIf="goodlife" -->
 
-<div (click)="showInfo=!showInfo" class="info">
-  <button type="button" name="button" class="info-btn"><h1>Good Life &#8595;</h1></button>
-  <span class="info-text" *ngIf="showInfo">
-     <p>is an ongoing conversation with special people in our community that provides a deeper look into what makes the brand what it is. We've always understood that we are the sum of the people around us, and the gamut of our network is diverse in age, vocation, interest, etc. Each discourse ends with the subject leaving a question for the next person without know who they are, creating an unbroken line of story between people who are mostly complete strangers, but unwittingly connected through various relationships in our community. It's a fitting illustration of our rich group of friends and family whose unique influences shape the strange world we call Goodfight.
-  </span>
-</div>
+  <div (click)="showInfo=!showInfo" class="info">
+    <button type="button" name="button" class="info-btn"><h1>Good Life &#8595;</h1></button>
+    <span class="info-text" *ngIf="showInfo">
+       <p>is an ongoing conversation with special people in our community that provides a deeper look into what makes the brand what it is. We've always understood that we are the sum of the people around us, and the gamut of our network is diverse in age, vocation, interest, etc. Each discourse ends with the subject leaving a question for the next person without know who they are, creating an unbroken line of story between people who are mostly complete strangers, but unwittingly connected through various relationships in our community. It's a fitting illustration of our rich group of friends and family whose unique influences shape the strange world we call Goodfight.
+    </span>
+  </div>
 
 
  <svg #svgg class="goodlife-svg" ></svg>
@@ -17,13 +17,14 @@
   <div class="goodlife-intro">
     <h1>{{goodlife.results[selected].data.interviewee[0].text}}</h1>
     <img class="goodlife-image" src="{{goodlife.results[selected].data.cover[0].image.url}}" alt="{{goodlife.results[selected].data.interviewee[0].text}}">
+    <p class="p2">{{goodlife.results[selected].data.title[0]?.text}}</p>
+    <!-- <p>company: {{goodlife.results[selected].data.company[0].text}}</p> -->
   </div>
   <li class="goodlife-li" *ngFor="let e of goodlife.results[selected].data.body">
     <div class="goodlife-question" *ngFor="let q of e.items">
       <h3>{{q.question[0].text}}</h3>
       <p>{{q.answer[0].text}}</p>
     </div>
-
   </li>
 </ul>
 
