@@ -143,16 +143,21 @@
   z-index:99;
   background-color: rgba(0,0,0,0.0);
   min-width: 30px;
-  min-height: 30px;
+  min-height: 90px;
   max-width: 40vw;
   transition:         all $transition-slow ease;
   -webkit-transition: all $transition-slow ease;
   -moz-transition:    all $transition-slow ease;
   -ms-transition:     all $transition-slow ease;
   -o-transition:      all $transition-slow ease;
+  @include respond-to(phone) {
+    max-width: 80vw;
+    background-color: #f8f7ec;
+    padding: 5px 5px;
+  }
 }
  .info-btn{
-
+   height:
  }
 
  .info-text{
