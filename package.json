@@ -6,7 +6,8 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "node server/main.js",
+    "start": "NODE_ENV=production node server/main.js",
+    "staging": "NODE_ENV=staging nodemon server/main.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
