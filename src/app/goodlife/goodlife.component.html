@@ -25,8 +25,8 @@
   </div>
   <li class="goodlife-li" *ngFor="let e of goodlife.results[selected].data.body">
     <div class="goodlife-question" *ngFor="let q of e.items">
-      <h3>{{q.question[0].text}}</h3>
-      <p>{{q.answer[0].text}}</p>
+      <h3>{{q.question[0]?.text}}</h3>
+      <p>{{q.answer[0]?.text}}</p>
     </div>
   </li>
 </ul>
