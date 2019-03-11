@@ -121,8 +121,8 @@ force(interviews){
  var links_data = [
    {"source": "yukimatsuda", "target": "lingchou", "type":"A", "distance":100},
    {"source": "lingchou", "target": "yulinchu", "type":"A", "distance":70},
-  {"source": "yulinchu", "target": "joshwarner", "type":"A", "distance":150}
-    // {"source": "noellecornelio", "target": "", "type":"A", "distance":80},
+  {"source": "yulinchu", "target": "joshwarner", "type":"A", "distance":150},
+    {"source": "joshwarner", "target": "jennylee", "type":"A", "distance":80}
 
 ]
 
