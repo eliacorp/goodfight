@@ -27,7 +27,7 @@ exports.getAll = function (req, res) {
   initApi(req).then(function(api){
     api.query(
         Prismic.Predicates.at('document.type', type),
-        { orderings : '[my.'+type+'.date desc]', pageSize : 10, page : page }
+        { orderings : '[my.'+type+'.date]', pageSize : 10, page : page }
       ).then(function(response) {
         console.log(response);
         res.status(200).json(response);
@@ -124,8 +124,6 @@ exports.getSingle = function (req, res) {
 
 
 exports.getType = function (req, res) {
-
-
 
   Prismic.Api(ENDPOINT, function (err, Api) {
       Api.form('everything')
