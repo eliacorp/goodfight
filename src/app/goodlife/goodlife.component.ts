@@ -123,7 +123,9 @@ force(interviews){
    {"source": "lingchou", "target": "yulinchu", "type":"A", "distance":70},
   {"source": "yulinchu", "target": "joshwarner", "type":"A", "distance":150},
     {"source": "joshwarner", "target": "jennyle", "type":"A", "distance":80},
-    {"source": "jennyle", "target": "jeyperie", "type":"A", "distance":120}
+    {"source": "jennyle", "target": "jeyperie", "type":"A", "distance":120},
+    {"source": "jeyperie", "target": "aaronhutcherson", "type":"A", "distance":120}
+
 
 
 ]
