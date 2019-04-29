@@ -736,7 +736,8 @@ var GoodlifeComponent = /** @class */ (function () {
             { "source": "joshwarner", "target": "jennyle", "type": "A", "distance": 80 },
             { "source": "jennyle", "target": "jeyperie", "type": "A", "distance": 120 },
             { "source": "jeyperie", "target": "aaronhutcherson", "type": "A", "distance": 120 },
-            { "source": "aaronhutcherson", "target": "austinjcurtis", "type": "A", "distance": 60 }
+            { "source": "aaronhutcherson", "target": "austinjcurtis", "type": "A", "distance": 60 },
+            { "source": "austinjcurtis", "target": "karenkaiser", "type": "A", "distance": 40 }
         ];
         if (this._matchMediaService.IsPhone()) {
             width = this.innerWidth / 2;
