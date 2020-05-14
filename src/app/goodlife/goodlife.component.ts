@@ -2,8 +2,8 @@ import { Component, OnInit, HostListener, Inject, EventEmitter, Output, ElementR
 import {PrismicService} from '../shared/prismic.service';
 import {GlobalService} from '../shared/variables.service';
 import {MatchMediaService} from '../shared/match-media.service';
-import { Location } from '@angular/common';
-import { DOCUMENT } from '@angular/platform-browser';
+import { Location, DOCUMENT } from '@angular/common';
+
 import {IGoodlife } from './goodlife';
 import * as d3 from "d3";
 

@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener, Inject, ElementRef, ViewChild} from '@
 import {PrismicService} from '../../shared/prismic.service';
 import {GlobalService} from '../../shared/variables.service';
 // import {IFeed}from './feed';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from "@angular/common";
 import { Router, NavigationEnd } from '@angular/router';
 import { fadeAnimation, routerTransition } from './../../_animation/router.animation';
 

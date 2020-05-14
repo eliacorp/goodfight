@@ -1,8 +1,8 @@
 import { Component, OnInit, HostListener, Inject, EventEmitter, Output } from '@angular/core';
 import {PrismicService} from '../shared/prismic.service';
 import {GlobalService} from '../shared/variables.service';
-import { Location } from '@angular/common';
-import { DOCUMENT } from '@angular/platform-browser';
+import { Location, DOCUMENT } from '@angular/common';
+
 import {IPress} from './press';
 
 @Component({
