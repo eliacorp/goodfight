@@ -61,7 +61,7 @@ export class NavComponent implements OnInit {
    }
 
      constructor(
-       private route: ActivatedRoute,
+       public route: ActivatedRoute,
        location: Location,
        router: Router,
        public _globalService: GlobalService,

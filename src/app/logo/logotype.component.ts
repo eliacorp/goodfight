@@ -40,10 +40,11 @@ import {
 export class LogotypeComponent implements OnInit {
 
   constructor(
-    private _globalService: GlobalService
+  private _globalService: GlobalService,
   ) { }
 
   ngOnInit() {
+
   }
 
 }

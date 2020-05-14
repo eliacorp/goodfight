@@ -4,7 +4,6 @@ import { GlobalService } from '../shared/variables.service';
 import { Location } from '@angular/common';
 import { fadeAnimation, routerTransition } from './../_animation/router.animation';
 import { ActivatedRoute, Params, Router, NavigationExtras, NavigationEnd } from '@angular/router';
-import { Subscription } from "rxjs/Subscription";
 
 @Component({
   templateUrl: './home.component.html',
@@ -44,6 +43,10 @@ export class HomeComponent implements OnInit{
       }, wait)
     }
   }
+
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+    onScroll(event) {
+    }
 
   onNotify(message:string):void {
     console.log(message);

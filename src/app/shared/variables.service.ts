@@ -1,8 +1,9 @@
-import {Injectable, Input, HostListener} from "@angular/core";
+import { Injectable, Input, HostListener, Directive } from "@angular/core";
 import { ResponsiveModule } from 'ng2-responsive';
 import { MatchMediaService } from './match-media.service';
 import { Router } from '@angular/router';
 
+@Directive()
 @Injectable()
 export class GlobalService {
     public pageLoading=true;

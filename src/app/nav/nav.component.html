@@ -23,12 +23,12 @@
 
 <ul class="nav-main">
   <li class="nav-li">
-    <a href="https://gdfht.com/" class="nav-a" [class.nav_active]="route === '/goodlife'" [class.blacked_text]="_globalService.isStyling  && !_matchMediaService.IsPhone()">
+    <a href="https://gdfht.com/" class="nav-a" [class.nav_active]="route.toString() == '/goodlife'" [class.blacked_text]="_globalService.isStyling  && !_matchMediaService.IsPhone()">
       <h2>Shop</h2>
     </a>
   </li>
   <li class="nav-li">
-    <a [routerLink]="['/goodlife']" class="nav-a" [class.nav_active]="route === '/goodlife'" routerLinkActive="active-link">
+    <a [routerLink]="['/goodlife']" class="nav-a" [class.nav_active]="route.toString() == '/goodlife'" routerLinkActive="active-link">
       <h2>Good Life</h2>
     </a>
   </li>

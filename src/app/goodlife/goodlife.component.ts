@@ -26,7 +26,8 @@ export class GoodlifeComponent implements OnInit {
   isGradientVisible = false;
   gradientTop: number;
   gradientLeft: number;
-  gradientRadius
+  gradientRadius;
+  showInfo:boolean = true;
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
