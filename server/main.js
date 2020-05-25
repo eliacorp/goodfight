@@ -28,14 +28,14 @@ const app = express();
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/../dist');
-// app.use(function(req, res, next) {
-//   if(process.env.NODE_ENV=='production'){
-//     if((!req.secure) && (req.get('X-Forwarded-Proto') !== 'https')) {
-//         res.redirect('https://' + req.get('Host') + req.url);
-//     }
-//   }
-//   next();
-// });
+app.use(function(req, res, next) {
+  if(process.env.NODE_ENV=='production'){
+    if((!req.secure) && (req.get('X-Forwarded-Proto') !== 'https')) {
+        res.redirect('https://' + req.get('Host') + req.url);
+    }
+  }
+  next();
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // Point static path to dist
