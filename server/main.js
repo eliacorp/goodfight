@@ -5,6 +5,7 @@ process.env.secret_key= '62QCnCqbvwFKoBGfNqbV205rfRjprP0NqXQ8fZ-01Bc-';
 const express = require('express');
 const path = require('path');
 const http = require("http");
+const https = require('https');
 
 const bodyParser = require('body-parser');
 const https = require("https");
@@ -103,7 +104,12 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
-const server = http.createServer(app);
+ if(process.env.NODE_ENV=='production'){
+   const server = https.createServer(app);
+ }else{
+   const server = http.createServer(app);
+ }
+
 
 /**
  * Listen on provided port, on all network interfaces.
