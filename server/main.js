@@ -100,16 +100,13 @@ app.get('*', routes.index);
 const port = process.env.PORT || '8081';
 app.set('port', port);
 
-const server;
+
 /**
  * Create HTTP server.
  */
  //
- if(process.env.NODE_ENV=='production'){
-  server = https.createServer(app);
- }else{
-   server = http.createServer(app);
- }
+
+ const server = http.createServer(app);
 
 
 /**
