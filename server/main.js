@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
         res.redirect('https://' + req.get('Host') + req.url);
     }
   }
-  next();
+  // next();
 });
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
