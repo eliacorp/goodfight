@@ -5,7 +5,6 @@ process.env.secret_key= '62QCnCqbvwFKoBGfNqbV205rfRjprP0NqXQ8fZ-01Bc-';
 const express = require('express');
 const path = require('path');
 const http = require("http");
-const https = require('https');
 
 const bodyParser = require('body-parser');
 const https = require("https");
