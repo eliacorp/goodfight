@@ -32,6 +32,7 @@
     "@ngx-meta/core": "9.0.0",
     "@ngx-translate/core": "12.1.2",
     "@ngx-translate/http-loader": "4.0.0",
+    "body-parser": "^1.19.0",
     "client-sessions": "*",
     "cookie-parser": "1.4.5",
     "core-js": "3.6.5",
@@ -53,7 +54,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.6",
+    "@angular-devkit/build-angular": "^0.901.7",
     "@angular/cli": "9.1.6",
     "@angular/compiler-cli": "^9.1.7",
     "@angular/language-service": "9.1.7",
